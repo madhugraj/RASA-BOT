@@ -1,0 +1,41 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_happy
+- utter_unclear
+- utter_ask_abrevation
+- utter_ask_expansion
+- action_retrieve_expansion
+actions:
+- utter_greet
+- utter_happy
+- utter_unclear
+- utter_ask_abrevation
+- utter_ask_expansion
+- __main__.ApiAction
+config:
+  store_entities_as_slots: true
+entities:
+- group
+intents:
+- greet
+- goodbye
+- mood_affirm
+- mood_great
+- inform
+slots:
+  group:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_abrevation:
+  - text: Would u like to know the abbrevation for something?
+  utter_ask_expansion:
+  - text: Would u like to know the expansion for something?
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Great carry on!
+  utter_unclear:
+  - text: I am not sure what you are aiming for.
+topics: []
